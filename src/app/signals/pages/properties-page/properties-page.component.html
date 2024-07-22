@@ -1,0 +1,16 @@
+<h1>Mutaciones</h1>
+<hr>
+
+<div class="row">
+
+    <div class="col-6">
+        <input #txtEmail (input)="onFieldUpdated('email', txtEmail.value)" type="text" class="form-control mb-2">
+        <input #txtFirstName (input)="onFieldUpdated('first_name', txtFirstName.value)" type="text" class="form-control mb-2">
+        <input #txtLastName (input)="onFieldUpdated('last_name', txtLastName.value)" type="text" class="form-control mb-2">
+    </div>
+
+    <div class="col-6">
+        
+    </div>
+
+</div>
