@@ -4,13 +4,15 @@
 <div class="row">
 
     <div class="col-6">
-        <input #txtEmail (input)="onFieldUpdated('email', txtEmail.value)" type="text" class="form-control mb-2">
-        <input #txtFirstName (input)="onFieldUpdated('first_name', txtFirstName.value)" type="text" class="form-control mb-2">
-        <input #txtLastName (input)="onFieldUpdated('last_name', txtLastName.value)" type="text" class="form-control mb-2">
+        <input #txtEmail (input)="onFieldUpdated('email', txtEmail.value)" [value]="user().email" type="text" class="form-control mb-2">
+        <input #txtFirstName (input)="onFieldUpdated('first_name', txtFirstName.value)" [value]="user().first_name" type="text" class="form-control mb-2">
+        <input #txtLastName (input)="onFieldUpdated('last_name', txtLastName.value)" [value]="user().last_name" type="text" class="form-control mb-2">
     </div>
 
     <div class="col-6">
-        
+        <pre>{{ user() | json }}</pre>
+
+        {{fullName()}}
     </div>
 
 </div>
